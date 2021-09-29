@@ -66,8 +66,6 @@ stages:
     - publish: '$(Build.ArtifactStagingDirectory)'
       artifact: drop
 
--
-
 - job: RunUITests
     displayName: 'Run UI tests'
     pool:
