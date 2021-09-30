@@ -43,6 +43,7 @@ jobs:
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
-          server: ftp://waws-prod-dm1-239.ftp.azurewebsites.windows.net/site/wwwroot
+          server: ftps://waws-prod-dm1-239.ftp.azurewebsites.windows.net
           username: ContosoAnalyticsWP\$ContosoAnalyticsWP
           password: miSWc8gpcn6t6F7GFgubsuqCxuELSDu0XuWZ1j5D44mPe0euqnlfEhtnA3dl
+          server-dir: /site/wwwroot/
