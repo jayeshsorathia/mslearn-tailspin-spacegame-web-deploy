@@ -67,10 +67,8 @@ stages:
   
 - stage: 'Staging'
   displayName: 'Deploy to the staging environment'
-  dependsOn: Build
   jobs:
   - job: RunLoadTests
-    dependsOn: Build
     displayName: 'Run load tests'
     pool:
       vmImage: 'ubuntu-20.04'
