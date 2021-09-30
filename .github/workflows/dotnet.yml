@@ -24,7 +24,25 @@ jobs:
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
     - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@main
       with:
-          name: .net-app
+          name: dist
           path: ${{env.DOTNET_ROOT}}/myapp
+  deploy:
+    name: Deploy 🚀
+    needs: build
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with: 
+          name: dist
+          path: dist
+      - name: Sync files to hosting
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with: 
+          server: ftps://waws-prod-dm1-239.ftp.azurewebsites.windows.net/site/wwwroot
+          username: ContosoAnalyticsWP\$ContosoAnalyticsWP
+          password: miSWc8gpcn6t6F7GFgubsuqCxuELSDu0XuWZ1j5D44mPe0euqnlfEhtnA3dl
