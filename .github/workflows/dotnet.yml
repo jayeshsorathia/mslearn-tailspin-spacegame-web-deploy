@@ -43,8 +43,8 @@ jobs:
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
-          server: ftp://waws-prod-dm1-231.ftp.azurewebsites.windows.net
+          server: ftp://waws-prod-dm1-231.ftp.azurewebsites.windows.net/site/wwwroot
           username: appinsightdemo123\$appinsightdemo123
           password: MljAEBeEqQXKTCyF6a2bwDM1QQoTQgXaELbhw0G5puzxyB2u0SEfkfcMYZpd
           protocol: ftps
-          server-dir: /site/wwwroot/
+          
