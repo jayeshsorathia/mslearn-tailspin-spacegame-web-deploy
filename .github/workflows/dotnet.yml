@@ -41,10 +41,11 @@ jobs:
           name: dist
           path: dist
       - name: Sync files to hosting
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
         with: 
-          server: ftp://test.rebex.net
-          username: demo
-          password: password
+          ftp_host: ftp://test.rebex.net
+          ftp_username: demo
+          ftp_password: password
+          local_source_dir: "pub"
           
           
