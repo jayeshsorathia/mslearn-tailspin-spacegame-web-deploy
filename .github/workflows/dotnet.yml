@@ -46,6 +46,6 @@ jobs:
           ftp_host: ftp://test.rebex.net
           ftp_username: demo
           ftp_password: password
-          local_source_dir: "pub"
+          
           
           
