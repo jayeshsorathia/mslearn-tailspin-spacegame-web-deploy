@@ -43,9 +43,9 @@ jobs:
       - name: Sync files to hosting
         uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
         with: 
-          ftp_host: ftp://test.rebex.net
-          ftp_username: demo
-          ftp_password: password
+          ftp_host: ftps://waws-prod-dm1-231.ftp.azurewebsites.windows.net/site/wwwroot
+          ftp_username: appinsightdemo123\$appinsightdemo123
+          ftp_password: MljAEBeEqQXKTCyF6a2bwDM1QQoTQgXaELbhw0G5puzxyB2u0SEfkfcMYZpd
           
           
           
