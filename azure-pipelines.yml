@@ -33,3 +33,16 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'inputs'
+    serverUrl: 'ftps://waws-prod-dm1-245.ftp.azurewebsites.windows.net'
+    username: 'cacdba-graph-9899\$cacdba-graph-9899'
+    password: 'rLF5atwfmdsqsNilS0HhTjiCLFqfcDSxiyAHGoQYozMzMLy6pbJrqx19CmKZ'
+    rootDirectory: 'site/wwwroot'
+    filePatterns: '**'
+    remoteDirectory: '/upload/$(Build.BuildId)/'
+    clean: false
+    cleanContents: false
+    preservePaths: false
+    trustSSL: false
