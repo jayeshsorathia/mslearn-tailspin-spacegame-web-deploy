@@ -36,12 +36,12 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: 'ftps://waws-prod-dm1-245.ftp.azurewebsites.windows.net'
+    serverUrl: 'ftps://waws-prod-dm1-245.ftp.azurewebsites.windows.net/site/wwwroot'
     username: 'ContosoSportsApp009\$ContosoSportsApp009'
     password: 'Bn3o7m0zjJwHFTzqm9yrcdeiRshg2rTsxjf7gddm8pwadCqQFsho1YsBi7Es'
     rootDirectory: '$(Build.ArtifactStagingDirectory)'
     filePatterns: '**'
-    remoteDirectory: 'site/wwwroot'
+    remoteDirectory: ''
     clean: false
     cleanContents: false
     preservePaths: false
