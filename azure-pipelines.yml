@@ -41,7 +41,7 @@ steps:
     password: 'rLF5atwfmdsqsNilS0HhTjiCLFqfcDSxiyAHGoQYozMzMLy6pbJrqx19CmKZ'
     rootDirectory: 'site/wwwroot'
     filePatterns: '**'
-    remoteDirectory: '/upload/$(Build.BuildId)/'
+    remoteDirectory: '$(Build.ArtifactStagingDirectory)'
     clean: false
     cleanContents: false
     preservePaths: false
